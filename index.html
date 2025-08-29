@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Recommendation System</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Movie Recommendation System</h1>
+    <p>Find your next favorite movie!</p>
+    <input type="text" id="search-bar" placeholder="Search for a movie..."/>
+  </header>
+
+  <main>
+    <div class="movie-container" id="movie-container">
+      <!-- Movies will be injected by script.js -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Movie Recommendation System</p>
+    <p><button id="feedback-btn">Give Feedback</button></p>
+  </footer>
+
+  <!-- Trailer Modal -->
+  <div id="trailer-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-btn">&times;</span>
+      <iframe id="trailer-video" width="100%" height="400px" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Feedback Modal -->
+  <div id="feedback-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-feedback">&times;</span>
+      <form id="feedback-form">
+        <label for="name">Your Name:</label>
+         <input type="text" placeholder="Name"><br><br>
+
+        <label for="email">Your Email: </label>
+         <input type="text" placeholder="Your Email"><br><br>
+
+        <label for="message">Your Feedback:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

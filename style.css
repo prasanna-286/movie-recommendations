@@ -1,0 +1,261 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: #fff;
+}
+
+header {
+  padding: 15px;
+  background: #000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 5px 0;
+}
+
+#search-bar {
+  padding: 10px;
+  margin-top: 10px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 5px;
+  border: none;
+}
+
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.movie-card {
+  background: #222;
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform 0.2s;
+}
+.movie-card:hover {
+  transform: scale(1.05);
+}
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.movie-card h3 {
+  font-size: 1rem;
+  margin: 10px 0 5px;
+}
+.movie-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.movie-card button {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.movie-card button:hover {
+  background: #b20710;
+}
+
+/* Modal Styling */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  background: #000;
+  padding: 10px;
+  width: 95%;        /* 🔹 Increase width */
+  max-width: 1200px; /* 🔹 Allow wider modal */
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+#trailer-video {
+  width: 100%;
+  height: 500px;  /* you can adjust */
+}
+
+#close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Recommendation Section */
+#recommendations {
+  margin-top: 20px;
+  text-align: left;
+}
+#recommendations h2 {
+  margin-bottom: 10px;
+}
+.recommend-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.rec-card {
+  width: 120px;
+  cursor: pointer;
+}
+.rec-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+.rec-card p {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #000;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  #trailer-video {
+    height: 350px;  /* bigger than before */
+  }
+}
+
+@media (max-width: 480px) {
+  #trailer-video {
+    height: 250px;  /* a bit bigger than before */
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-container {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+  .movie-card h3 {
+    font-size: 0.9rem;
+  }
+  .movie-card p {
+    font-size: 0.8rem;
+  }
+  #trailer-video {
+    height: 200px;
+  }
+  .rec-card {
+    width: 100px;
+  }
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0; 
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background: #1c1b1b;
+  margin: 10% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+/* Feedback Modal */
+#feedback-modal {
+  display: none; 
+  position: fixed; 
+  z-index: 2000; 
+  left: 0; 
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.7);
+  overflow: auto;
+}
+
+/* Modal Box */
+#feedback-modal .modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Close button */
+#close-feedback {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Feedback form */
+#feedback-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#feedback-form input, 
+#feedback-form textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+}
+
+#feedback-form button {
+  margin-top: 12px;
+  background: #ff4c4c;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+}
+
+#feedback-form button:hover {
+  background: #e63e3e;
+}
